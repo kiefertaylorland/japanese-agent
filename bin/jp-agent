@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+VENV_PY="$ROOT/.venv/bin/python"
+
+if [ -x "$VENV_PY" ]; then
+  exec "$VENV_PY" -m jp_agent.cli "$@"
+fi
+
+exec python3 -m jp_agent.cli "$@"

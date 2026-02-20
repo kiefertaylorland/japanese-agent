@@ -1,0 +1,22 @@
+[
+  {"kanji":"時","meaning":["time","hour"]},
+  {"kanji":"分","meaning":["minute","part"]},
+  {"kanji":"間","meaning":["interval","space"]},
+  {"kanji":"今","meaning":"now"},
+  {"kanji":"会","meaning":["meet","association"]},
+  {"kanji":"社","meaning":"company"},
+  {"kanji":"店","meaning":"shop"},
+  {"kanji":"駅","meaning":"station"},
+  {"kanji":"道","meaning":["road","way"]},
+  {"kanji":"事","meaning":["thing","matter"]},
+  {"kanji":"思","meaning":"think"},
+  {"kanji":"知","meaning":"know"},
+  {"kanji":"作","meaning":"make"},
+  {"kanji":"使","meaning":"use"},
+  {"kanji":"住","meaning":"live"},
+  {"kanji":"持","meaning":"hold"},
+  {"kanji":"入","meaning":"enter"},
+  {"kanji":"出","meaning":"exit"},
+  {"kanji":"動","meaning":"move"},
+  {"kanji":"働","meaning":"work"}
+]

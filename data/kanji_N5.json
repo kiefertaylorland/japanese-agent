@@ -1,0 +1,22 @@
+[
+  {"kanji":"日","meaning":["sun","day"]},
+  {"kanji":"月","meaning":["moon","month"]},
+  {"kanji":"火","meaning":"fire"},
+  {"kanji":"水","meaning":"water"},
+  {"kanji":"木","meaning":"tree"},
+  {"kanji":"金","meaning":"gold","meaning":["gold","money"]},
+  {"kanji":"土","meaning":"earth"},
+  {"kanji":"人","meaning":"person"},
+  {"kanji":"女","meaning":"woman"},
+  {"kanji":"男","meaning":"man"},
+  {"kanji":"子","meaning":"child"},
+  {"kanji":"山","meaning":"mountain"},
+  {"kanji":"川","meaning":"river"},
+  {"kanji":"田","meaning":"rice field"},
+  {"kanji":"天","meaning":"heaven"},
+  {"kanji":"気","meaning":["spirit","air"]},
+  {"kanji":"学","meaning":["study","learning"]},
+  {"kanji":"生","meaning":["life","birth"]},
+  {"kanji":"先","meaning":"previous"},
+  {"kanji":"本","meaning":["book","origin"]}
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "base": "言う",
+    "keigo": "申し上げる",
+    "type": "kenjogo",
+    "meaning": "to say (humble)",
+    "usage": "business",
+    "example_contexts": ["email", "meeting"]
+  },
+  {
+    "base": "聞く",
+    "keigo": "伺う",
+    "type": "kenjogo",
+    "meaning": "to ask or hear (humble)",
+    "usage": "business",
+    "example_contexts": ["email", "meeting", "phone"]
+  },
+  {
+    "base": "行く",
+    "keigo": "伺う",
+    "type": "kenjogo",
+    "meaning": "to go (humble)",
+    "usage": "business",
+    "example_contexts": ["visit", "meeting"]
+  },
+  {
+    "base": "来る",
+    "keigo": "お越しになる",
+    "type": "sonkeigo",
+    "meaning": "to come (honorific)",
+    "usage": "business",
+    "example_contexts": ["meeting", "reception"]
+  },
+  {
+    "base": "いる",
+    "keigo": "いらっしゃる",
+    "type": "sonkeigo",
+    "meaning": "to be (honorific)",
+    "usage": "business",
+    "example_contexts": ["meeting", "phone"]
+  },
+  {
+    "base": "する",
+    "keigo": "なさる",
+    "type": "sonkeigo",
+    "meaning": "to do (honorific)",
+    "usage": "business",
+    "example_contexts": ["meeting", "email"]
+  },
+  {
+    "base": "見る",
+    "keigo": "ご覧になる",
+    "type": "sonkeigo",
+    "meaning": "to see (honorific)",
+    "usage": "business",
+    "example_contexts": ["presentation", "demo"]
+  },
+  {
+    "base": "くれる",
+    "keigo": "くださる",
+    "type": "sonkeigo",
+    "meaning": "to give (honorific)",
+    "usage": "business",
+    "example_contexts": ["email", "in-person"]
+  },
+  {
+    "base": "もらう",
+    "keigo": "いただく",
+    "type": "kenjogo",
+    "meaning": "to receive (humble)",
+    "usage": "business",
+    "example_contexts": ["email", "meeting"]
+  },
+  {
+    "base": "会う",
+    "keigo": "お目にかかる",
+    "type": "kenjogo",
+    "meaning": "to meet (humble)",
+    "usage": "business",
+    "example_contexts": ["meeting", "visit"]
+  },
+  {
+    "base": "です",
+    "keigo": "でございます",
+    "type": "teineigo",
+    "meaning": "to be (polite copula)",
+    "usage": "business",
+    "example_contexts": ["email", "reception"]
+  },
+  {
+    "base": "あります",
+    "keigo": "ございます",
+    "type": "teineigo",
+    "meaning": "to exist (polite)",
+    "usage": "business",
+    "example_contexts": ["email", "presentation"]
+  }
+]
