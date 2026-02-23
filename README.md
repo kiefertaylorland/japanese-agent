@@ -16,6 +16,14 @@ pip install -r requirements-dev.txt
 jp-agent init --sync
 jp-agent study kana
 ```
+## Development
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+pytest -q
+```
 
 ## Commands
 
@@ -32,23 +40,6 @@ Added curated datasets for practical study:
 
 These are integrated into the CLI study flow and can be practiced like other modes.
 
-### How to use the new vocab/phrases right now
-
-```bash
-# List categories in core vocab
-jq -r '.[].category' data/core_vocab_survival.json | sort -u
-
-# Preview vocab words (English -> Japanese / kana / romaji)
-jq -r '.[] | "\(.english) -> \(.japanese) / \(.kana) / \(.romaji)"' data/core_vocab_survival.json | head -n 25
-
-# Search for a word/phrase
-jq -r '.[] | select(.english|test("wallet|airport|expensive"; "i"))' data/core_vocab_survival.json
-jq -r '.[] | select(.english|test("thank you|where is the ATM|table for two"; "i"))' data/survival_phrases.json
-
-# Print all survival phrases
-jq -r '.[] | "\(.english) -> \(.japanese) / \(.kana) / \(.romaji)"' data/survival_phrases.json
-```
-
 ### Current `jp-agent` study modes
 
 ```bash
@@ -63,16 +54,7 @@ jp-agent study survival
 
 ## Work With Me
 
-- 📅 15-min automation audit: https://calendly.com/kiefertaylorland/15-minute-meeting
+- 📅 15-min discovery call: https://calendly.com/kiefertaylorland/15-minute-meeting
 - ✉️ Email: kiefertaylorland@gmail.com
 - 💼 LinkedIn: https://www.linkedin.com/in/kieferland/
 - 🌐 Portfolio: https://kiefertaylorland.github.io/portfolio/
-
-## Development
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-dev.txt
-pytest -q
-```
