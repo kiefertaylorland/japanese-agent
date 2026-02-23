@@ -1,83 +1,459 @@
 [
-  {"english":"good morning","japanese":"おはようございます","kana":"おはようございます","romaji":"ohayou gozaimasu"},
-  {"english":"good afternoon","japanese":"こんにちは","kana":"こんにちは","romaji":"konnichiwa"},
-  {"english":"good evening","japanese":"こんばんは","kana":"こんばんは","romaji":"konbanwa"},
-  {"english":"good night","japanese":"おやすみなさい","kana":"おやすみなさい","romaji":"oyasuminasai"},
-  {"english":"how are you?","japanese":"お元気ですか？","kana":"おげんきですか","romaji":"ogenki desu ka"},
-  {"english":"i'm well and you?","japanese":"元気です。あなたは？","kana":"げんきです。あなたは？","romaji":"genki desu. anata wa?"},
-  {"english":"see you tomorrow","japanese":"また明日","kana":"またあした","romaji":"mata ashita"},
-  {"english":"see you later","japanese":"また後で","kana":"またあとで","romaji":"mata ato de"},
-  {"english":"thank you","japanese":"ありがとうございます","kana":"ありがとうございます","romaji":"arigatou gozaimasu"},
-  {"english":"you're welcome","japanese":"どういたしまして","kana":"どういたしまして","romaji":"douitashimashite"},
-  {"english":"nice to meet you","japanese":"はじめまして","kana":"はじめまして","romaji":"hajimemashite"},
-  {"english":"my name is Kiefer Land","japanese":"キーファー・ランドです","kana":"きーふぁー・らんどです","romaji":"Kiefer Land desu"},
-  {"english":"please to meet you","japanese":"よろしくお願いします","kana":"よろしくおねがいします","romaji":"yoroshiku onegaishimasu"},
-
-  {"english":"how many people in the party?","japanese":"何名様ですか？","kana":"なんめいさまですか","romaji":"nanmei-sama desu ka"},
-  {"english":"table for two people","japanese":"二人です","kana":"ふたりです","romaji":"futari desu"},
-  {"english":"i'm hungry","japanese":"お腹が空きました","kana":"おなかがすきました","romaji":"onaka ga sukimashita"},
-  {"english":"i'm hungry AF","japanese":"めっちゃお腹すいた","kana":"めっちゃおなかすいた","romaji":"meccha onaka suita","note":"casual/slang"},
-  {"english":"i'm thirsty","japanese":"喉が渇きました","kana":"のどがかわきました","romaji":"nodo ga kawakimashita"},
-  {"english":"menu, please","japanese":"メニューをお願いします","kana":"めにゅーをおねがいします","romaji":"menyuu o onegaishimasu"},
-  {"english":"dumplings, please","japanese":"餃子をお願いします","kana":"ぎょうざをおねがいします","romaji":"gyouza o onegaishimasu"},
-  {"english":"kaedama please","japanese":"替え玉をお願いします","kana":"かえだまをおねがいします","romaji":"kaedama o onegaishimasu"},
-  {"english":"i humbly receive this food","japanese":"いただきます","kana":"いただきます","romaji":"itadakimasu"},
-  {"english":"this looks delicious","japanese":"美味しそうです","kana":"おいしそうです","romaji":"oishisou desu"},
-  {"english":"this is delicious","japanese":"美味しいです","kana":"おいしいです","romaji":"oishii desu"},
-  {"english":"i'm full","japanese":"お腹いっぱいです","kana":"おなかいっぱいです","romaji":"onaka ippai desu"},
-  {"english":"thank you for this meal","japanese":"ごちそうさまでした","kana":"ごちそうさまでした","romaji":"gochisousama deshita"},
-
-  {"english":"excuse me","japanese":"すみません","kana":"すみません","romaji":"sumimasen"},
-  {"english":"i'm sorry","japanese":"ごめんなさい","kana":"ごめんなさい","romaji":"gomennasai"},
-  {"english":"is this okay?","japanese":"これは大丈夫ですか？","kana":"これはだいじょうぶですか","romaji":"kore wa daijoubu desu ka"},
-  {"english":"is that so","japanese":"そうですか","kana":"そうですか","romaji":"sou desu ka"},
-  {"english":"yes, that is right","japanese":"はい、そうです","kana":"はい、そうです","romaji":"hai, sou desu"},
-  {"english":"i don't understand","japanese":"分かりません","kana":"わかりません","romaji":"wakarimasen"},
-  {"english":"i don't understand the question","japanese":"質問が分かりません","kana":"しつもんがわかりません","romaji":"shitsumon ga wakarimasen"},
-  {"english":"one more time please","japanese":"もう一度お願いします","kana":"もういちどおねがいします","romaji":"mou ichido onegaishimasu"},
-  {"english":"thank you for your hospitality","japanese":"おもてなしありがとうございます","kana":"おもてなしありがとうございます","romaji":"omotenashi arigatou gozaimasu"},
-  {"english":"i was wrong","japanese":"私が間違っていました","kana":"わたしがまちがっていました","romaji":"watashi ga machigatte imashita"},
-  {"english":"oh no","japanese":"ああ、だめだ","kana":"ああ、だめだ","romaji":"aa, dameda"},
-  {"english":"not at all","japanese":"全然大丈夫です","kana":"ぜんぜんだいじょうぶです","romaji":"zenzen daijoubu desu"},
-  {"english":"that is not the case","japanese":"そうではありません","kana":"そうではありません","romaji":"sou de wa arimasen"},
-  {"english":"i'm ok","japanese":"大丈夫です","kana":"だいじょうぶです","romaji":"daijoubu desu"},
-  {"english":"i'm good","japanese":"元気です","kana":"げんきです","romaji":"genki desu"},
-
-  {"english":"want to go shopping?","japanese":"買い物に行きたい？","kana":"かいものにいきたい？","romaji":"kaimono ni ikitai?"},
-  {"english":"where should we meet?","japanese":"どこで会いましょうか？","kana":"どこであいましょうか","romaji":"doko de aimashou ka"},
-  {"english":"how much is this?","japanese":"これはいくらですか？","kana":"これはいくらですか","romaji":"kore wa ikura desu ka"},
-  {"english":"this is cheap","japanese":"これは安いです","kana":"これはやすいです","romaji":"kore wa yasui desu"},
-  {"english":"this is expensive","japanese":"これは高いです","kana":"これはたかいです","romaji":"kore wa takai desu"},
-  {"english":"i want to buy a souvenir","japanese":"お土産を買いたいです","kana":"おみやげをかいたいです","romaji":"omiyage o kaitai desu"},
-  {"english":"i don't have any money","japanese":"お金がありません","kana":"おかねがありません","romaji":"okane ga arimasen"},
-  {"english":"do you accept credit card?","japanese":"クレジットカードは使えますか？","kana":"くれじっとかーどはつかえますか","romaji":"kurejitto kaado wa tsukaemasu ka"},
-  {"english":"where is the ATM?","japanese":"ATMはどこですか？","kana":"えーてぃーえむはどこですか","romaji":"ATM wa doko desu ka"},
-
-  {"english":"congratulations","japanese":"おめでとうございます","kana":"おめでとうございます","romaji":"omedetou gozaimasu"},
-  {"english":"happy birthday","japanese":"お誕生日おめでとう","kana":"おたんじょうびおめでとう","romaji":"otanjoubi omedetou"},
-  {"english":"happy new year","japanese":"明けましておめでとうございます","kana":"あけましておめでとうございます","romaji":"akemashite omedetou gozaimasu"},
-  {"english":"happy anniversary","japanese":"記念日おめでとう","kana":"きねんびおめでとう","romaji":"kinenbi omedetou"},
-  {"english":"happy valentine's day","japanese":"ハッピーバレンタイン","kana":"はっぴーばれんたいん","romaji":"happii barentain"},
-  {"english":"congrats on your graduation","japanese":"ご卒業おめでとうございます","kana":"ごそつぎょうおめでとうございます","romaji":"gosotsugyou omedetou gozaimasu"},
-  {"english":"thanks for your hard work","japanese":"お疲れ様です","kana":"おつかれさまです","romaji":"otsukaresama desu"},
-  {"english":"i'm home","japanese":"ただいま","kana":"ただいま","romaji":"tadaima"},
-  {"english":"welcome home","japanese":"おかえり","kana":"おかえり","romaji":"okaeri"},
-  {"english":"i'm heading out","japanese":"行ってきます","kana":"いってきます","romaji":"ittekimasu"},
-  {"english":"take care (when someone is leaving)","japanese":"気をつけて","kana":"きをつけて","romaji":"ki o tsukete"},
-  {"english":"please be careful","japanese":"気をつけてください","kana":"きをつけてください","romaji":"ki o tsukete kudasai"},
-
-  {"english":"are you single?","japanese":"独身ですか？","kana":"どくしんですか","romaji":"dokushin desu ka"},
-  {"english":"i am single","japanese":"独身です","kana":"どくしんです","romaji":"dokushin desu"},
-  {"english":"i want to get to know you better","japanese":"もっとあなたのことを知りたいです","kana":"もっとあなたのことをしりたいです","romaji":"motto anata no koto o shiritai desu"},
-  {"english":"i like you","japanese":"あなたが好きです","kana":"あなたがすきです","romaji":"anata ga suki desu"},
-  {"english":"please go out with me","japanese":"私と付き合ってください","kana":"わたしとつきあってください","romaji":"watashi to tsukiatte kudasai"},
-  {"english":"would you like to go get coffee with me?","japanese":"一緒にコーヒーを飲みに行きませんか？","kana":"いっしょにこーひーをのみにいきませんか","romaji":"issho ni koohii o nomi ni ikimasen ka"},
-  {"english":"what is your phone number?","japanese":"電話番号は何ですか？","kana":"でんわばんごうはなんですか","romaji":"denwa bangou wa nan desu ka"},
-  {"english":"you are cute","japanese":"かわいいですね","kana":"かわいいですね","romaji":"kawaii desu ne"},
-  {"english":"you are handsome","japanese":"かっこいいですね","kana":"かっこいいですね","romaji":"kakkoii desu ne"},
-  {"english":"i am divorced","japanese":"離婚しています","kana":"りこんしています","romaji":"rikon shiteimasu"},
-  {"english":"i am married","japanese":"結婚しています","kana":"けっこんしています","romaji":"kekkon shiteimasu"},
-  {"english":"i have a boyfriend","japanese":"彼氏がいます","kana":"かれしがいます","romaji":"kareshi ga imasu"},
-  {"english":"i have a girlfriend","japanese":"彼女がいます","kana":"かのじょがいます","romaji":"kanojo ga imasu"},
-  {"english":"i bought you a present","japanese":"あなたにプレゼントを買いました","kana":"あなたにぷれぜんとをかいました","romaji":"anata ni purezento o kaimashita"}
+  {
+    "english": "good morning",
+    "japanese": "おはようございます",
+    "kana": "おはようございます",
+    "romaji": "ohayou gozaimasu"
+  },
+  {
+    "english": "good afternoon",
+    "japanese": "こんにちは",
+    "kana": "こんにちは",
+    "romaji": "konnichiwa"
+  },
+  {
+    "english": "good evening",
+    "japanese": "こんばんは",
+    "kana": "こんばんは",
+    "romaji": "konbanwa"
+  },
+  {
+    "english": "good night",
+    "japanese": "おやすみなさい",
+    "kana": "おやすみなさい",
+    "romaji": "oyasuminasai"
+  },
+  {
+    "english": "how are you?",
+    "japanese": "おげんきですか",
+    "kana": "おげんきですか",
+    "romaji": "ogenki desu ka"
+  },
+  {
+    "english": "i'm well and you?",
+    "japanese": "げんきです。あなたは？",
+    "kana": "げんきです。あなたは？",
+    "romaji": "genki desu. anata wa?"
+  },
+  {
+    "english": "see you tomorrow",
+    "japanese": "またあした",
+    "kana": "またあした",
+    "romaji": "mata ashita"
+  },
+  {
+    "english": "see you later",
+    "japanese": "またあとで",
+    "kana": "またあとで",
+    "romaji": "mata ato de"
+  },
+  {
+    "english": "thank you",
+    "japanese": "ありがとうございます",
+    "kana": "ありがとうございます",
+    "romaji": "arigatou gozaimasu"
+  },
+  {
+    "english": "you're welcome",
+    "japanese": "どういたしまして",
+    "kana": "どういたしまして",
+    "romaji": "douitashimashite"
+  },
+  {
+    "english": "nice to meet you",
+    "japanese": "はじめまして",
+    "kana": "はじめまして",
+    "romaji": "hajimemashite"
+  },
+  {
+    "english": "my name is Kiefer Land",
+    "japanese": "きーふぁー・らんどです",
+    "kana": "きーふぁー・らんどです",
+    "romaji": "Kiefer Land desu"
+  },
+  {
+    "english": "please to meet you",
+    "japanese": "よろしくおねがいします",
+    "kana": "よろしくおねがいします",
+    "romaji": "yoroshiku onegaishimasu"
+  },
+  {
+    "english": "how many people in the party?",
+    "japanese": "なんめいさまですか",
+    "kana": "なんめいさまですか",
+    "romaji": "nanmei-sama desu ka"
+  },
+  {
+    "english": "table for two people",
+    "japanese": "ふたりです",
+    "kana": "ふたりです",
+    "romaji": "futari desu"
+  },
+  {
+    "english": "i'm hungry",
+    "japanese": "おなかがすきました",
+    "kana": "おなかがすきました",
+    "romaji": "onaka ga sukimashita"
+  },
+  {
+    "english": "i'm hungry AF",
+    "japanese": "めっちゃおなかすいた",
+    "kana": "めっちゃおなかすいた",
+    "romaji": "meccha onaka suita",
+    "note": "casual/slang"
+  },
+  {
+    "english": "i'm thirsty",
+    "japanese": "のどがかわきました",
+    "kana": "のどがかわきました",
+    "romaji": "nodo ga kawakimashita"
+  },
+  {
+    "english": "menu, please",
+    "japanese": "めにゅーをおねがいします",
+    "kana": "めにゅーをおねがいします",
+    "romaji": "menyuu o onegaishimasu"
+  },
+  {
+    "english": "dumplings, please",
+    "japanese": "ぎょうざをおねがいします",
+    "kana": "ぎょうざをおねがいします",
+    "romaji": "gyouza o onegaishimasu"
+  },
+  {
+    "english": "kaedama please",
+    "japanese": "かえだまをおねがいします",
+    "kana": "かえだまをおねがいします",
+    "romaji": "kaedama o onegaishimasu"
+  },
+  {
+    "english": "i humbly receive this food",
+    "japanese": "いただきます",
+    "kana": "いただきます",
+    "romaji": "itadakimasu"
+  },
+  {
+    "english": "this looks delicious",
+    "japanese": "おいしそうです",
+    "kana": "おいしそうです",
+    "romaji": "oishisou desu"
+  },
+  {
+    "english": "this is delicious",
+    "japanese": "おいしいです",
+    "kana": "おいしいです",
+    "romaji": "oishii desu"
+  },
+  {
+    "english": "i'm full",
+    "japanese": "おなかいっぱいです",
+    "kana": "おなかいっぱいです",
+    "romaji": "onaka ippai desu"
+  },
+  {
+    "english": "thank you for this meal",
+    "japanese": "ごちそうさまでした",
+    "kana": "ごちそうさまでした",
+    "romaji": "gochisousama deshita"
+  },
+  {
+    "english": "excuse me",
+    "japanese": "すみません",
+    "kana": "すみません",
+    "romaji": "sumimasen"
+  },
+  {
+    "english": "i'm sorry",
+    "japanese": "ごめんなさい",
+    "kana": "ごめんなさい",
+    "romaji": "gomennasai"
+  },
+  {
+    "english": "is this okay?",
+    "japanese": "これはだいじょうぶですか",
+    "kana": "これはだいじょうぶですか",
+    "romaji": "kore wa daijoubu desu ka"
+  },
+  {
+    "english": "is that so",
+    "japanese": "そうですか",
+    "kana": "そうですか",
+    "romaji": "sou desu ka"
+  },
+  {
+    "english": "yes, that is right",
+    "japanese": "はい、そうです",
+    "kana": "はい、そうです",
+    "romaji": "hai, sou desu"
+  },
+  {
+    "english": "i don't understand",
+    "japanese": "わかりません",
+    "kana": "わかりません",
+    "romaji": "wakarimasen"
+  },
+  {
+    "english": "i don't understand the question",
+    "japanese": "しつもんがわかりません",
+    "kana": "しつもんがわかりません",
+    "romaji": "shitsumon ga wakarimasen"
+  },
+  {
+    "english": "one more time please",
+    "japanese": "もういちどおねがいします",
+    "kana": "もういちどおねがいします",
+    "romaji": "mou ichido onegaishimasu"
+  },
+  {
+    "english": "thank you for your hospitality",
+    "japanese": "おもてなしありがとうございます",
+    "kana": "おもてなしありがとうございます",
+    "romaji": "omotenashi arigatou gozaimasu"
+  },
+  {
+    "english": "i was wrong",
+    "japanese": "わたしがまちがっていました",
+    "kana": "わたしがまちがっていました",
+    "romaji": "watashi ga machigatte imashita"
+  },
+  {
+    "english": "oh no",
+    "japanese": "ああ、だめだ",
+    "kana": "ああ、だめだ",
+    "romaji": "aa, dameda"
+  },
+  {
+    "english": "not at all",
+    "japanese": "ぜんぜんだいじょうぶです",
+    "kana": "ぜんぜんだいじょうぶです",
+    "romaji": "zenzen daijoubu desu"
+  },
+  {
+    "english": "that is not the case",
+    "japanese": "そうではありません",
+    "kana": "そうではありません",
+    "romaji": "sou de wa arimasen"
+  },
+  {
+    "english": "i'm ok",
+    "japanese": "だいじょうぶです",
+    "kana": "だいじょうぶです",
+    "romaji": "daijoubu desu"
+  },
+  {
+    "english": "i'm good",
+    "japanese": "げんきです",
+    "kana": "げんきです",
+    "romaji": "genki desu"
+  },
+  {
+    "english": "want to go shopping?",
+    "japanese": "かいものにいきたい？",
+    "kana": "かいものにいきたい？",
+    "romaji": "kaimono ni ikitai?"
+  },
+  {
+    "english": "where should we meet?",
+    "japanese": "どこであいましょうか",
+    "kana": "どこであいましょうか",
+    "romaji": "doko de aimashou ka"
+  },
+  {
+    "english": "how much is this?",
+    "japanese": "これはいくらですか",
+    "kana": "これはいくらですか",
+    "romaji": "kore wa ikura desu ka"
+  },
+  {
+    "english": "this is cheap",
+    "japanese": "これはやすいです",
+    "kana": "これはやすいです",
+    "romaji": "kore wa yasui desu"
+  },
+  {
+    "english": "this is expensive",
+    "japanese": "これはたかいです",
+    "kana": "これはたかいです",
+    "romaji": "kore wa takai desu"
+  },
+  {
+    "english": "i want to buy a souvenir",
+    "japanese": "おみやげをかいたいです",
+    "kana": "おみやげをかいたいです",
+    "romaji": "omiyage o kaitai desu"
+  },
+  {
+    "english": "i don't have any money",
+    "japanese": "おかねがありません",
+    "kana": "おかねがありません",
+    "romaji": "okane ga arimasen"
+  },
+  {
+    "english": "do you accept credit card?",
+    "japanese": "くれじっとかーどはつかえますか",
+    "kana": "くれじっとかーどはつかえますか",
+    "romaji": "kurejitto kaado wa tsukaemasu ka"
+  },
+  {
+    "english": "where is the ATM?",
+    "japanese": "えーてぃーえむはどこですか",
+    "kana": "えーてぃーえむはどこですか",
+    "romaji": "ATM wa doko desu ka"
+  },
+  {
+    "english": "congratulations",
+    "japanese": "おめでとうございます",
+    "kana": "おめでとうございます",
+    "romaji": "omedetou gozaimasu"
+  },
+  {
+    "english": "happy birthday",
+    "japanese": "おたんじょうびおめでとう",
+    "kana": "おたんじょうびおめでとう",
+    "romaji": "otanjoubi omedetou"
+  },
+  {
+    "english": "happy new year",
+    "japanese": "あけましておめでとうございます",
+    "kana": "あけましておめでとうございます",
+    "romaji": "akemashite omedetou gozaimasu"
+  },
+  {
+    "english": "happy anniversary",
+    "japanese": "きねんびおめでとう",
+    "kana": "きねんびおめでとう",
+    "romaji": "kinenbi omedetou"
+  },
+  {
+    "english": "happy valentine's day",
+    "japanese": "はっぴーばれんたいん",
+    "kana": "はっぴーばれんたいん",
+    "romaji": "happii barentain"
+  },
+  {
+    "english": "congrats on your graduation",
+    "japanese": "ごそつぎょうおめでとうございます",
+    "kana": "ごそつぎょうおめでとうございます",
+    "romaji": "gosotsugyou omedetou gozaimasu"
+  },
+  {
+    "english": "thanks for your hard work",
+    "japanese": "おつかれさまです",
+    "kana": "おつかれさまです",
+    "romaji": "otsukaresama desu"
+  },
+  {
+    "english": "i'm home",
+    "japanese": "ただいま",
+    "kana": "ただいま",
+    "romaji": "tadaima"
+  },
+  {
+    "english": "welcome home",
+    "japanese": "おかえり",
+    "kana": "おかえり",
+    "romaji": "okaeri"
+  },
+  {
+    "english": "i'm heading out",
+    "japanese": "いってきます",
+    "kana": "いってきます",
+    "romaji": "ittekimasu"
+  },
+  {
+    "english": "take care (when someone is leaving)",
+    "japanese": "きをつけて",
+    "kana": "きをつけて",
+    "romaji": "ki o tsukete"
+  },
+  {
+    "english": "please be careful",
+    "japanese": "きをつけてください",
+    "kana": "きをつけてください",
+    "romaji": "ki o tsukete kudasai"
+  },
+  {
+    "english": "are you single?",
+    "japanese": "どくしんですか",
+    "kana": "どくしんですか",
+    "romaji": "dokushin desu ka"
+  },
+  {
+    "english": "i am single",
+    "japanese": "どくしんです",
+    "kana": "どくしんです",
+    "romaji": "dokushin desu"
+  },
+  {
+    "english": "i want to get to know you better",
+    "japanese": "もっとあなたのことをしりたいです",
+    "kana": "もっとあなたのことをしりたいです",
+    "romaji": "motto anata no koto o shiritai desu"
+  },
+  {
+    "english": "i like you",
+    "japanese": "あなたがすきです",
+    "kana": "あなたがすきです",
+    "romaji": "anata ga suki desu"
+  },
+  {
+    "english": "please go out with me",
+    "japanese": "わたしとつきあってください",
+    "kana": "わたしとつきあってください",
+    "romaji": "watashi to tsukiatte kudasai"
+  },
+  {
+    "english": "would you like to go get coffee with me?",
+    "japanese": "いっしょにこーひーをのみにいきませんか",
+    "kana": "いっしょにこーひーをのみにいきませんか",
+    "romaji": "issho ni koohii o nomi ni ikimasen ka"
+  },
+  {
+    "english": "what is your phone number?",
+    "japanese": "でんわばんごうはなんですか",
+    "kana": "でんわばんごうはなんですか",
+    "romaji": "denwa bangou wa nan desu ka"
+  },
+  {
+    "english": "you are cute",
+    "japanese": "かわいいですね",
+    "kana": "かわいいですね",
+    "romaji": "kawaii desu ne"
+  },
+  {
+    "english": "you are handsome",
+    "japanese": "かっこいいですね",
+    "kana": "かっこいいですね",
+    "romaji": "kakkoii desu ne"
+  },
+  {
+    "english": "i am divorced",
+    "japanese": "りこんしています",
+    "kana": "りこんしています",
+    "romaji": "rikon shiteimasu"
+  },
+  {
+    "english": "i am married",
+    "japanese": "けっこんしています",
+    "kana": "けっこんしています",
+    "romaji": "kekkon shiteimasu"
+  },
+  {
+    "english": "i have a boyfriend",
+    "japanese": "かれしがいます",
+    "kana": "かれしがいます",
+    "romaji": "kareshi ga imasu"
+  },
+  {
+    "english": "i have a girlfriend",
+    "japanese": "かのじょがいます",
+    "kana": "かのじょがいます",
+    "romaji": "kanojo ga imasu"
+  },
+  {
+    "english": "i bought you a present",
+    "japanese": "あなたにぷれぜんとをかいました",
+    "kana": "あなたにぷれぜんとをかいました",
+    "romaji": "anata ni purezento o kaimashita"
+  }
 ]

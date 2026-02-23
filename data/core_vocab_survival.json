@@ -1,56 +1,352 @@
 [
-  {"category":"people","english":"senior","japanese":"先輩","kana":"せんぱい","romaji":"senpai"},
-  {"category":"people","english":"junior","japanese":"後輩","kana":"こうはい","romaji":"kouhai"},
-  {"category":"people","english":"I (polite)","japanese":"私","kana":"わたし","romaji":"watashi"},
-  {"category":"people","english":"you (polite)","japanese":"あなた","kana":"あなた","romaji":"anata"},
-  {"category":"people","english":"we","japanese":"私たち","kana":"わたしたち","romaji":"watashitachi"},
-  {"category":"people","english":"he/him","japanese":"彼","kana":"かれ","romaji":"kare"},
-  {"category":"people","english":"she/her","japanese":"彼女","kana":"かのじょ","romaji":"kanojo"},
-  {"category":"people","english":"friend","japanese":"友達","kana":"ともだち","romaji":"tomodachi"},
-  {"category":"people","english":"family","japanese":"家族","kana":"かぞく","romaji":"kazoku"},
-  {"category":"people","english":"baby","japanese":"赤ちゃん","kana":"あかちゃん","romaji":"akachan"},
-
-  {"category":"things","english":"train","japanese":"電車","kana":"でんしゃ","romaji":"densha"},
-  {"category":"things","english":"book","japanese":"本","kana":"ほん","romaji":"hon"},
-  {"category":"things","english":"smartphone","japanese":"スマホ","kana":"すまほ","romaji":"sumaho"},
-  {"category":"things","english":"chair","japanese":"椅子","kana":"いす","romaji":"isu"},
-  {"category":"things","english":"desk","japanese":"机","kana":"つくえ","romaji":"tsukue"},
-  {"category":"things","english":"bag","japanese":"かばん","kana":"かばん","romaji":"kaban"},
-  {"category":"things","english":"wallet","japanese":"財布","kana":"さいふ","romaji":"saifu"},
-  {"category":"things","english":"car","japanese":"車","kana":"くるま","romaji":"kuruma"},
-  {"category":"things","english":"glasses","japanese":"眼鏡","kana":"めがね","romaji":"megane"},
-  {"category":"things","english":"room","japanese":"部屋","kana":"へや","romaji":"heya"},
-  {"category":"things","english":"chopsticks","japanese":"箸","kana":"はし","romaji":"hashi"},
-
-  {"category":"food","english":"food","japanese":"食べ物","kana":"たべもの","romaji":"tabemono"},
-  {"category":"food","english":"water","japanese":"水","kana":"みず","romaji":"mizu"},
-  {"category":"food","english":"rice/meal","japanese":"ご飯","kana":"ごはん","romaji":"gohan"},
-  {"category":"food","english":"tea","japanese":"お茶","kana":"おちゃ","romaji":"ocha"},
-  {"category":"food","english":"fruit","japanese":"果物","kana":"くだもの","romaji":"kudamono"},
-  {"category":"food","english":"vegetables","japanese":"野菜","kana":"やさい","romaji":"yasai"},
-  {"category":"food","english":"meat","japanese":"肉","kana":"にく","romaji":"niku"},
-  {"category":"food","english":"fish","japanese":"魚","kana":"さかな","romaji":"sakana"},
-  {"category":"food","english":"bread","japanese":"パン","kana":"ぱん","romaji":"pan"},
-
-  {"category":"places","english":"school","japanese":"学校","kana":"がっこう","romaji":"gakkou"},
-  {"category":"places","english":"store/shop","japanese":"店","kana":"みせ","romaji":"mise"},
-  {"category":"places","english":"hospital","japanese":"病院","kana":"びょういん","romaji":"byouin"},
-  {"category":"places","english":"station","japanese":"駅","kana":"えき","romaji":"eki"},
-  {"category":"places","english":"park","japanese":"公園","kana":"こうえん","romaji":"kouen"},
-  {"category":"places","english":"bank","japanese":"銀行","kana":"ぎんこう","romaji":"ginkou"},
-  {"category":"places","english":"home/house","japanese":"家","kana":"いえ","romaji":"ie"},
-  {"category":"places","english":"city/town","japanese":"町","kana":"まち","romaji":"machi"},
-  {"category":"places","english":"airport","japanese":"空港","kana":"くうこう","romaji":"kuukou"},
-  {"category":"places","english":"ocean/sea","japanese":"海","kana":"うみ","romaji":"umi"},
-
-  {"category":"adjectives","english":"big","japanese":"大きい","kana":"おおきい","romaji":"ookii"},
-  {"category":"adjectives","english":"small","japanese":"小さい","kana":"ちいさい","romaji":"chiisai"},
-  {"category":"adjectives","english":"new","japanese":"新しい","kana":"あたらしい","romaji":"atarashii"},
-  {"category":"adjectives","english":"old","japanese":"古い","kana":"ふるい","romaji":"furui"},
-  {"category":"adjectives","english":"good","japanese":"良い","kana":"いい","romaji":"ii"},
-  {"category":"adjectives","english":"bad","japanese":"悪い","kana":"わるい","romaji":"warui"},
-  {"category":"adjectives","english":"expensive","japanese":"高い","kana":"たかい","romaji":"takai"},
-  {"category":"adjectives","english":"cheap","japanese":"安い","kana":"やすい","romaji":"yasui"},
-  {"category":"adjectives","english":"interesting","japanese":"面白い","kana":"おもしろい","romaji":"omoshiroi"},
-  {"category":"adjectives","english":"fun","japanese":"楽しい","kana":"たのしい","romaji":"tanoshii"}
+  {
+    "category": "people",
+    "english": "senior",
+    "japanese": "せんぱい",
+    "kana": "せんぱい",
+    "romaji": "senpai"
+  },
+  {
+    "category": "people",
+    "english": "junior",
+    "japanese": "こうはい",
+    "kana": "こうはい",
+    "romaji": "kouhai"
+  },
+  {
+    "category": "people",
+    "english": "I (polite)",
+    "japanese": "わたし",
+    "kana": "わたし",
+    "romaji": "watashi"
+  },
+  {
+    "category": "people",
+    "english": "you (polite)",
+    "japanese": "あなた",
+    "kana": "あなた",
+    "romaji": "anata"
+  },
+  {
+    "category": "people",
+    "english": "we",
+    "japanese": "わたしたち",
+    "kana": "わたしたち",
+    "romaji": "watashitachi"
+  },
+  {
+    "category": "people",
+    "english": "he/him",
+    "japanese": "かれ",
+    "kana": "かれ",
+    "romaji": "kare"
+  },
+  {
+    "category": "people",
+    "english": "she/her",
+    "japanese": "かのじょ",
+    "kana": "かのじょ",
+    "romaji": "kanojo"
+  },
+  {
+    "category": "people",
+    "english": "friend",
+    "japanese": "ともだち",
+    "kana": "ともだち",
+    "romaji": "tomodachi"
+  },
+  {
+    "category": "people",
+    "english": "family",
+    "japanese": "かぞく",
+    "kana": "かぞく",
+    "romaji": "kazoku"
+  },
+  {
+    "category": "people",
+    "english": "baby",
+    "japanese": "あかちゃん",
+    "kana": "あかちゃん",
+    "romaji": "akachan"
+  },
+  {
+    "category": "things",
+    "english": "train",
+    "japanese": "でんしゃ",
+    "kana": "でんしゃ",
+    "romaji": "densha"
+  },
+  {
+    "category": "things",
+    "english": "book",
+    "japanese": "ほん",
+    "kana": "ほん",
+    "romaji": "hon"
+  },
+  {
+    "category": "things",
+    "english": "smartphone",
+    "japanese": "すまほ",
+    "kana": "すまほ",
+    "romaji": "sumaho"
+  },
+  {
+    "category": "things",
+    "english": "chair",
+    "japanese": "いす",
+    "kana": "いす",
+    "romaji": "isu"
+  },
+  {
+    "category": "things",
+    "english": "desk",
+    "japanese": "つくえ",
+    "kana": "つくえ",
+    "romaji": "tsukue"
+  },
+  {
+    "category": "things",
+    "english": "bag",
+    "japanese": "かばん",
+    "kana": "かばん",
+    "romaji": "kaban"
+  },
+  {
+    "category": "things",
+    "english": "wallet",
+    "japanese": "さいふ",
+    "kana": "さいふ",
+    "romaji": "saifu"
+  },
+  {
+    "category": "things",
+    "english": "car",
+    "japanese": "くるま",
+    "kana": "くるま",
+    "romaji": "kuruma"
+  },
+  {
+    "category": "things",
+    "english": "glasses",
+    "japanese": "めがね",
+    "kana": "めがね",
+    "romaji": "megane"
+  },
+  {
+    "category": "things",
+    "english": "room",
+    "japanese": "へや",
+    "kana": "へや",
+    "romaji": "heya"
+  },
+  {
+    "category": "things",
+    "english": "chopsticks",
+    "japanese": "はし",
+    "kana": "はし",
+    "romaji": "hashi"
+  },
+  {
+    "category": "food",
+    "english": "food",
+    "japanese": "たべもの",
+    "kana": "たべもの",
+    "romaji": "tabemono"
+  },
+  {
+    "category": "food",
+    "english": "water",
+    "japanese": "みず",
+    "kana": "みず",
+    "romaji": "mizu"
+  },
+  {
+    "category": "food",
+    "english": "rice/meal",
+    "japanese": "ごはん",
+    "kana": "ごはん",
+    "romaji": "gohan"
+  },
+  {
+    "category": "food",
+    "english": "tea",
+    "japanese": "おちゃ",
+    "kana": "おちゃ",
+    "romaji": "ocha"
+  },
+  {
+    "category": "food",
+    "english": "fruit",
+    "japanese": "くだもの",
+    "kana": "くだもの",
+    "romaji": "kudamono"
+  },
+  {
+    "category": "food",
+    "english": "vegetables",
+    "japanese": "やさい",
+    "kana": "やさい",
+    "romaji": "yasai"
+  },
+  {
+    "category": "food",
+    "english": "meat",
+    "japanese": "にく",
+    "kana": "にく",
+    "romaji": "niku"
+  },
+  {
+    "category": "food",
+    "english": "fish",
+    "japanese": "さかな",
+    "kana": "さかな",
+    "romaji": "sakana"
+  },
+  {
+    "category": "food",
+    "english": "bread",
+    "japanese": "ぱん",
+    "kana": "ぱん",
+    "romaji": "pan"
+  },
+  {
+    "category": "places",
+    "english": "school",
+    "japanese": "がっこう",
+    "kana": "がっこう",
+    "romaji": "gakkou"
+  },
+  {
+    "category": "places",
+    "english": "store/shop",
+    "japanese": "みせ",
+    "kana": "みせ",
+    "romaji": "mise"
+  },
+  {
+    "category": "places",
+    "english": "hospital",
+    "japanese": "びょういん",
+    "kana": "びょういん",
+    "romaji": "byouin"
+  },
+  {
+    "category": "places",
+    "english": "station",
+    "japanese": "えき",
+    "kana": "えき",
+    "romaji": "eki"
+  },
+  {
+    "category": "places",
+    "english": "park",
+    "japanese": "こうえん",
+    "kana": "こうえん",
+    "romaji": "kouen"
+  },
+  {
+    "category": "places",
+    "english": "bank",
+    "japanese": "ぎんこう",
+    "kana": "ぎんこう",
+    "romaji": "ginkou"
+  },
+  {
+    "category": "places",
+    "english": "home/house",
+    "japanese": "いえ",
+    "kana": "いえ",
+    "romaji": "ie"
+  },
+  {
+    "category": "places",
+    "english": "city/town",
+    "japanese": "まち",
+    "kana": "まち",
+    "romaji": "machi"
+  },
+  {
+    "category": "places",
+    "english": "airport",
+    "japanese": "くうこう",
+    "kana": "くうこう",
+    "romaji": "kuukou"
+  },
+  {
+    "category": "places",
+    "english": "ocean/sea",
+    "japanese": "うみ",
+    "kana": "うみ",
+    "romaji": "umi"
+  },
+  {
+    "category": "adjectives",
+    "english": "big",
+    "japanese": "おおきい",
+    "kana": "おおきい",
+    "romaji": "ookii"
+  },
+  {
+    "category": "adjectives",
+    "english": "small",
+    "japanese": "ちいさい",
+    "kana": "ちいさい",
+    "romaji": "chiisai"
+  },
+  {
+    "category": "adjectives",
+    "english": "new",
+    "japanese": "あたらしい",
+    "kana": "あたらしい",
+    "romaji": "atarashii"
+  },
+  {
+    "category": "adjectives",
+    "english": "old",
+    "japanese": "ふるい",
+    "kana": "ふるい",
+    "romaji": "furui"
+  },
+  {
+    "category": "adjectives",
+    "english": "good",
+    "japanese": "いい",
+    "kana": "いい",
+    "romaji": "ii"
+  },
+  {
+    "category": "adjectives",
+    "english": "bad",
+    "japanese": "わるい",
+    "kana": "わるい",
+    "romaji": "warui"
+  },
+  {
+    "category": "adjectives",
+    "english": "expensive",
+    "japanese": "たかい",
+    "kana": "たかい",
+    "romaji": "takai"
+  },
+  {
+    "category": "adjectives",
+    "english": "cheap",
+    "japanese": "やすい",
+    "kana": "やすい",
+    "romaji": "yasui"
+  },
+  {
+    "category": "adjectives",
+    "english": "interesting",
+    "japanese": "おもしろい",
+    "kana": "おもしろい",
+    "romaji": "omoshiroi"
+  },
+  {
+    "category": "adjectives",
+    "english": "fun",
+    "japanese": "たのしい",
+    "kana": "たのしい",
+    "romaji": "tanoshii"
+  }
 ]
