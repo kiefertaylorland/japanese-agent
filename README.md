@@ -23,6 +23,15 @@ jp-agent study kana
 - `jp-agent study MODE` — run study sessions (`kana`, `hiragana`, `katakana`, `kanji`, `keigo`)
 - `jp-agent stats` — review progress and accuracy
 
+## New Learning Packs
+
+Added curated datasets for practical study:
+
+- `data/core_vocab_survival.json` — foundational daily-life vocabulary (people, places, food, adjectives)
+- `data/survival_phrases.json` — travel/social survival phrases with Japanese, kana, and romaji
+
+These are ready to use as source material for future generator/scheduler lessons.
+
 ## Work With Me
 
 - 📅 15-min automation audit: https://calendly.com/kiefertaylorland/15-minute-meeting
