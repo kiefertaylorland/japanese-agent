@@ -30,7 +30,36 @@ Added curated datasets for practical study:
 - `data/core_vocab_survival.json` — foundational daily-life vocabulary (people, places, food, adjectives)
 - `data/survival_phrases.json` — travel/social survival phrases with Japanese, kana, and romaji
 
-These are ready to use as source material for future generator/scheduler lessons.
+These are currently **data packs** (not a built-in `study` mode yet), and can be used directly now via JSON tooling.
+
+### How to use the new vocab/phrases right now
+
+```bash
+# List categories in core vocab
+jq -r '.[].category' data/core_vocab_survival.json | sort -u
+
+# Preview vocab words (English -> Japanese / kana / romaji)
+jq -r '.[] | "\(.english) -> \(.japanese) / \(.kana) / \(.romaji)"' data/core_vocab_survival.json | head -n 25
+
+# Search for a word/phrase
+jq -r '.[] | select(.english|test("wallet|airport|expensive"; "i"))' data/core_vocab_survival.json
+jq -r '.[] | select(.english|test("thank you|where is the ATM|table for two"; "i"))' data/survival_phrases.json
+
+# Print all survival phrases
+jq -r '.[] | "\(.english) -> \(.japanese) / \(.kana) / \(.romaji)"' data/survival_phrases.json
+```
+
+### Current `jp-agent` study modes
+
+```bash
+jp-agent study kana
+jp-agent study hiragana
+jp-agent study katakana
+jp-agent study kanji --level N5
+jp-agent study keigo --context meeting
+```
+
+> Note: `core_vocab_survival.json` and `survival_phrases.json` are committed and ready; CLI modes like `jp-agent study vocab` / `jp-agent study survival` can be added next.
 
 ## Work With Me
 
