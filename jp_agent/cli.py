@@ -50,15 +50,15 @@ def init(
 
 @app.command()
 def study(
-    mode: str = typer.Argument(..., help="Study mode: kana, hiragana, katakana, kanji, keigo"),
+    mode: str = typer.Argument(..., help="Study mode: kana, hiragana, katakana, kanji, keigo, vocab, survival"),
     level: str | None = typer.Option(None, "--level", help="Kanji level (N5, N4, N3, N2)"),
     context: str | None = typer.Option(None, "--context", help="Keigo context (email, meeting, etc.)"),
     count: int = typer.Option(30, "--count", help="Number of questions"),
     db_path: str | None = typer.Option(None, "--db", help="Path to SQLite DB"),
 ) -> None:
     mode = mode.lower().strip()
-    if mode not in {"kana", "hiragana", "katakana", "kanji", "keigo"}:
-        print("Mode must be one of: kana, hiragana, katakana, kanji, keigo")
+    if mode not in {"kana", "hiragana", "katakana", "kanji", "keigo", "vocab", "survival"}:
+        print("Mode must be one of: kana, hiragana, katakana, kanji, keigo, vocab, survival")
         raise typer.Exit(code=2)
 
     if mode == "kanji":

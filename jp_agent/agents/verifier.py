@@ -23,6 +23,8 @@ class VerifierAgent:
             self._verify_kanji(card, question, vocab, issues)
         elif card.mode == "keigo":
             self._verify_keigo(card, question, vocab, issues)
+        elif card.mode in {"vocab", "survival"}:
+            self._verify_phrase(card, question, vocab, issues)
         else:
             issues.append(f"unsupported mode: {card.mode}")
 
@@ -56,6 +58,31 @@ class VerifierAgent:
                 issues.append("meaning_to_kanji choices not in whitelist")
         else:
             issues.append("unknown kanji variant")
+
+    def _verify_phrase(self, card: CardSpec, question: GeneratedQuestion, vocab: VocabStore, issues: list[str]) -> None:
+        entries = vocab.core_vocab if card.mode == "vocab" else vocab.survival_phrases
+        entry_map = {entry.english: entry for entry in entries}
+        if card.vocab_key not in entry_map:
+            issues.append(f"{card.mode} key missing in whitelist")
+            return
+
+        entry = entry_map[card.vocab_key]
+        japanese_set = {item.japanese for item in entries}
+        english_set = {item.english for item in entries}
+
+        if card.variant == "english_to_japanese":
+            if any(choice not in japanese_set for choice in question.choices):
+                issues.append(f"{card.mode} english_to_japanese choices not in whitelist")
+            if question.choices[question.correct_index] != entry.japanese:
+                issues.append(f"{card.mode} english_to_japanese correct mismatch")
+        elif card.variant == "japanese_to_english":
+            if any(choice not in english_set for choice in question.choices):
+                issues.append(f"{card.mode} japanese_to_english choices not in whitelist")
+            if question.choices[question.correct_index] != entry.english:
+                issues.append(f"{card.mode} japanese_to_english correct mismatch")
+        else:
+            issues.append(f"unknown {card.mode} variant")
+
 
     def _verify_keigo(self, card: CardSpec, question: GeneratedQuestion, vocab: VocabStore, issues: list[str]) -> None:
         keigo_entries = vocab.keigo

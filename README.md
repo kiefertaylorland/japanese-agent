@@ -20,7 +20,7 @@ jp-agent study kana
 ## Commands
 
 - `jp-agent init` — initialize SQLite DB and optionally sync cards
-- `jp-agent study MODE` — run study sessions (`kana`, `hiragana`, `katakana`, `kanji`, `keigo`)
+- `jp-agent study MODE` — run study sessions (`kana`, `hiragana`, `katakana`, `kanji`, `keigo`, `vocab`, `survival`)
 - `jp-agent stats` — review progress and accuracy
 
 ## New Learning Packs
@@ -30,7 +30,7 @@ Added curated datasets for practical study:
 - `data/core_vocab_survival.json` — foundational daily-life vocabulary (people, places, food, adjectives)
 - `data/survival_phrases.json` — travel/social survival phrases with Japanese, kana, and romaji
 
-These are currently **data packs** (not a built-in `study` mode yet), and can be used directly now via JSON tooling.
+These are integrated into the CLI study flow and can be practiced like other modes.
 
 ### How to use the new vocab/phrases right now
 
@@ -57,9 +57,9 @@ jp-agent study hiragana
 jp-agent study katakana
 jp-agent study kanji --level N5
 jp-agent study keigo --context meeting
+jp-agent study vocab
+jp-agent study survival
 ```
-
-> Note: `core_vocab_survival.json` and `survival_phrases.json` are committed and ready; CLI modes like `jp-agent study vocab` / `jp-agent study survival` can be added next.
 
 ## Work With Me
 

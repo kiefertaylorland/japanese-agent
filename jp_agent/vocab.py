@@ -30,12 +30,24 @@ class KeigoEntry:
     example_contexts: list[str]
 
 
+@dataclass(frozen=True)
+class PhraseEntry:
+    english: str
+    japanese: str
+    kana: str
+    romaji: str
+    category: str | None = None
+    note: str | None = None
+
+
 @dataclass
 class VocabStore:
     hiragana: list[KanaEntry]
     katakana: list[KanaEntry]
     kanji: dict[str, list[KanjiEntry]]
     keigo: list[KeigoEntry]
+    core_vocab: list[PhraseEntry]
+    survival_phrases: list[PhraseEntry]
 
     def kana_by_mode(self, mode: str) -> list[KanaEntry]:
         if mode == "hiragana":
@@ -54,6 +66,8 @@ EXPECTED_FILES = {
     "hiragana": "hiragana.json",
     "katakana": "katakana.json",
     "keigo": "keigo_basic.json",
+    "core_vocab": "core_vocab_survival.json",
+    "survival": "survival_phrases.json",
     "kanji_N5": "kanji_N5.json",
     "kanji_N4": "kanji_N4.json",
     "kanji_N3": "kanji_N3.json",
@@ -84,6 +98,16 @@ def required_filenames(mode: str, level: str | None) -> list[str]:
         return [EXPECTED_FILES[f"kanji_{level}"]]
     if mode == "keigo":
         return [EXPECTED_FILES["keigo"]]
+    if mode == "vocab":
+        return [EXPECTED_FILES["core_vocab"]]
+    if mode == "survival":
+        return [EXPECTED_FILES["survival"]]
+    if mode == "vocab":
+        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["core_vocab"]))
+        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=entries, survival_phrases=[])
+    if mode == "survival":
+        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["survival"]))
+        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=[], survival_phrases=entries)
     raise ValueError(f"Unsupported mode: {mode}")
 
 
@@ -185,6 +209,29 @@ def load_keigo(path: Path) -> list[KeigoEntry]:
     return entries
 
 
+
+
+def load_phrases(path: Path) -> list[PhraseEntry]:
+    raw = _load_json(path)
+    entries: list[PhraseEntry] = []
+    for idx, item in enumerate(raw):
+        if not isinstance(item, dict):
+            raise ValueError(f"Invalid phrase entry at index {idx} in {path}")
+        english = item.get("english")
+        japanese = item.get("japanese")
+        kana = item.get("kana")
+        romaji = item.get("romaji")
+        if not all(isinstance(val, str) for val in (english, japanese, kana, romaji)):
+            raise ValueError(f"Phrase entry requires english/japanese/kana/romaji strings at index {idx} in {path}")
+        category = item.get("category")
+        note = item.get("note")
+        if category is not None and not isinstance(category, str):
+            raise ValueError(f"Phrase entry category must be string at index {idx} in {path}")
+        if note is not None and not isinstance(note, str):
+            raise ValueError(f"Phrase entry note must be string at index {idx} in {path}")
+        entries.append(PhraseEntry(english=english, japanese=japanese, kana=kana, romaji=romaji, category=category, note=note))
+    return entries
+
 def load_all_vocab(data_dir: Path) -> VocabStore:
     hiragana = load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["hiragana"]))
     katakana = load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["katakana"]))
@@ -195,14 +242,23 @@ def load_all_vocab(data_dir: Path) -> VocabStore:
         "N2": load_kanji(resolve_vocab_path(data_dir, EXPECTED_FILES["kanji_N2"])),
     }
     keigo = load_keigo(resolve_vocab_path(data_dir, EXPECTED_FILES["keigo"]))
-    return VocabStore(hiragana=hiragana, katakana=katakana, kanji=kanji, keigo=keigo)
+    core_vocab = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["core_vocab"]))
+    survival_phrases = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["survival"]))
+    return VocabStore(
+        hiragana=hiragana,
+        katakana=katakana,
+        kanji=kanji,
+        keigo=keigo,
+        core_vocab=core_vocab,
+        survival_phrases=survival_phrases,
+    )
 
 
 def load_vocab_for_mode(data_dir: Path, mode: str, level: str | None) -> VocabStore:
     if mode == "kana":
         hiragana = load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["hiragana"]))
         katakana = load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["katakana"]))
-        return VocabStore(hiragana=hiragana, katakana=katakana, kanji={}, keigo=[])
+        return VocabStore(hiragana=hiragana, katakana=katakana, kanji={}, keigo=[], core_vocab=[], survival_phrases=[])
     if mode in {"hiragana", "katakana"}:
         hiragana = (
             load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["hiragana"])) if mode == "hiragana" else []
@@ -210,7 +266,7 @@ def load_vocab_for_mode(data_dir: Path, mode: str, level: str | None) -> VocabSt
         katakana = (
             load_kana(resolve_vocab_path(data_dir, EXPECTED_FILES["katakana"])) if mode == "katakana" else []
         )
-        return VocabStore(hiragana=hiragana, katakana=katakana, kanji={}, keigo=[])
+        return VocabStore(hiragana=hiragana, katakana=katakana, kanji={}, keigo=[], core_vocab=[], survival_phrases=[])
     if mode == "kanji":
         if not level:
             raise ValueError("Kanji mode requires a level (N5, N4, N3, N2)")
@@ -218,8 +274,14 @@ def load_vocab_for_mode(data_dir: Path, mode: str, level: str | None) -> VocabSt
         if not filename:
             raise ValueError(f"Unsupported kanji level: {level}")
         kanji_entries = load_kanji(resolve_vocab_path(data_dir, filename))
-        return VocabStore(hiragana=[], katakana=[], kanji={level: kanji_entries}, keigo=[])
+        return VocabStore(hiragana=[], katakana=[], kanji={level: kanji_entries}, keigo=[], core_vocab=[], survival_phrases=[])
     if mode == "keigo":
         keigo = load_keigo(resolve_vocab_path(data_dir, EXPECTED_FILES["keigo"]))
-        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=keigo)
+        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=keigo, core_vocab=[], survival_phrases=[])
+    if mode == "vocab":
+        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["core_vocab"]))
+        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=entries, survival_phrases=[])
+    if mode == "survival":
+        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["survival"]))
+        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=[], survival_phrases=entries)
     raise ValueError(f"Unsupported mode: {mode}")

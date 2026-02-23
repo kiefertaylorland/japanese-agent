@@ -58,4 +58,18 @@ def vocab_dir(tmp_path: Path) -> Path:
     ]
     (data_dir / EXPECTED_FILES["keigo"]).write_text(json.dumps(keigo_entries), encoding="utf-8")
 
+    core_vocab_entries = [
+        {"category": "people", "english": "friend", "japanese": "友達", "kana": "ともだち", "romaji": "tomodachi"},
+        {"category": "places", "english": "station", "japanese": "駅", "kana": "えき", "romaji": "eki"},
+        {"category": "food", "english": "water", "japanese": "水", "kana": "みず", "romaji": "mizu"},
+    ]
+    (data_dir / EXPECTED_FILES["core_vocab"]).write_text(json.dumps(core_vocab_entries), encoding="utf-8")
+
+    survival_entries = [
+        {"english": "thank you", "japanese": "ありがとうございます", "kana": "ありがとうございます", "romaji": "arigatou gozaimasu"},
+        {"english": "excuse me", "japanese": "すみません", "kana": "すみません", "romaji": "sumimasen"},
+        {"english": "how much is this?", "japanese": "これはいくらですか？", "kana": "これはいくらですか", "romaji": "kore wa ikura desu ka"},
+    ]
+    (data_dir / EXPECTED_FILES["survival"]).write_text(json.dumps(survival_entries), encoding="utf-8")
+
     return data_dir

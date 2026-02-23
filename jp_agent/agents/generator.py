@@ -7,7 +7,7 @@ from typing import Sequence
 
 from jp_agent.llm import LlmConfig
 from jp_agent.models import CardSpec, GeneratedQuestion, StudyRequest
-from jp_agent.vocab import KanaEntry, KanjiEntry, KeigoEntry, VocabStore
+from jp_agent.vocab import KanaEntry, KanjiEntry, KeigoEntry, PhraseEntry, VocabStore
 
 
 @dataclass
@@ -28,6 +28,8 @@ class ContentGeneratorAgent:
         }
         self._kanji_maps = {level: {entry.kanji: entry for entry in entries} for level, entries in vocab.kanji.items()}
         self._keigo_map = {entry.base: entry for entry in vocab.keigo}
+        self._vocab_map = {entry.english: entry for entry in vocab.core_vocab}
+        self._survival_map = {entry.english: entry for entry in vocab.survival_phrases}
 
     def generate(
         self,
@@ -42,6 +44,10 @@ class ContentGeneratorAgent:
             return self._generate_kanji(card, rng)
         if card.mode == "keigo":
             return self._generate_keigo(card, request, rng, use_llm=use_llm)
+        if card.mode == "vocab":
+            return self._generate_phrase(card, rng, self.vocab.core_vocab, self._vocab_map)
+        if card.mode == "survival":
+            return self._generate_phrase(card, rng, self.vocab.survival_phrases, self._survival_map)
         raise ValueError(f"Unsupported mode: {card.mode}")
 
     def _generate_kana(self, card: CardSpec, rng: random.Random) -> GeneratedQuestion:
@@ -96,6 +102,43 @@ class ContentGeneratorAgent:
             correct_index=correct_index,
             explanation="",
             meta={"mode": card.mode, "variant": card.variant, "level": card.level},
+        )
+
+    def _generate_phrase(
+        self,
+        card: CardSpec,
+        rng: random.Random,
+        entries: list[PhraseEntry],
+        entry_map: dict[str, PhraseEntry],
+    ) -> GeneratedQuestion:
+        if len(entries) < 3:
+            raise ValueError(f"Not enough {card.mode} entries for MCQ (need 3)")
+        entry = entry_map[card.vocab_key]
+
+        if card.variant == "english_to_japanese":
+            prompt = f"{entry.english} -> ?"
+            pool = [item.japanese for item in entries]
+            correct = entry.japanese
+        elif card.variant == "japanese_to_english":
+            prompt = f"{entry.japanese} -> ?"
+            pool = [item.english for item in entries]
+            correct = entry.english
+        else:
+            raise ValueError(f"Unsupported {card.mode} variant: {card.variant}")
+
+        choices, correct_index = _build_choices(rng, pool, correct)
+        explanation_parts = [f"Kana: {entry.kana}", f"Romaji: {entry.romaji}"]
+        if entry.category:
+            explanation_parts.append(f"Category: {entry.category}")
+        if entry.note:
+            explanation_parts.append(f"Note: {entry.note}")
+
+        return GeneratedQuestion(
+            prompt=prompt,
+            choices=choices,
+            correct_index=correct_index,
+            explanation=" | ".join(explanation_parts),
+            meta={"mode": card.mode, "variant": card.variant, "english": entry.english},
         )
 
     def _generate_keigo(
