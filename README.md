@@ -46,7 +46,5 @@ jp-agent study survival
 
 ## Work With Me
 
-- 📅 15-min discovery call: https://calendly.com/kiefertaylorland/15-minute-meeting
 - ✉️ Email: kiefertaylorland@gmail.com
 - 💼 LinkedIn: https://www.linkedin.com/in/kieferland/
-- 🌐 Portfolio: https://kiefertaylorland.github.io/portfolio/
