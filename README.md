@@ -2,10 +2,6 @@
 
 CLI Japanese study agent with SRS (hiragana, katakana, kanji, keigo).
 
-## Why this project
-
-This project shows how I design practical, user-facing automation with clear workflows, clean CLI ergonomics, and iterative quality engineering.
-
 ## Quickstart
 
 ```bash
