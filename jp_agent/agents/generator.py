@@ -183,7 +183,7 @@ class ContentGeneratorAgent:
 
         if card.variant == "context_selection":
             context = request.context if request.context in entry.example_contexts else entry.example_contexts[0]
-            article = "an" if context[:1].lower() in {"a", "e", "i", "o", "u"} else "a"
+            article = _indefinite_article(context)
             prompt = f"Which is appropriate in {article} {context} context?"
             pool_entries = [item for item in self.vocab.keigo if item.base != entry.base]
             if request.context:
@@ -260,3 +260,12 @@ def _build_choices(rng: random.Random, pool: Sequence[str], correct: str) -> tup
 
 def _random_meaning(rng: random.Random, entry: KanjiEntry) -> str:
     return rng.choice(entry.meaning)
+
+
+def _indefinite_article(word: str) -> str:
+    lower = word.strip().lower()
+    if lower.startswith(("honest", "honor", "hour", "heir")):
+        return "an"
+    if lower.startswith(("user", "uni", "euro", "one")):
+        return "a"
+    return "an" if lower[:1] in {"a", "e", "i", "o", "u"} else "a"

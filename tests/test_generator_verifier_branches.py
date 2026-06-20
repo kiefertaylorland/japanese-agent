@@ -191,6 +191,10 @@ def test_generator_error_paths_and_helpers(monkeypatch):
         random.Random(1),
     )
     assert captured_pool == ["申し上げる", "伺う", "拝見する"]
+    assert generator_module._indefinite_article("email") == "an"
+    assert generator_module._indefinite_article("meeting") == "a"
+    assert generator_module._indefinite_article("hour") == "an"
+    assert generator_module._indefinite_article("user") == "a"
 
 
 def test_generator_llm_explanation_uses_template_and_fallback():
