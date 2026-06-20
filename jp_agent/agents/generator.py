@@ -267,7 +267,9 @@ def _indefinite_article(word: str) -> str:
 
     This follows the usual vowel-sound rule, plus a few common English
     exceptions such as silent-H words ("hour") and consonant-sound leading
-    vowels ("user", "euro", "one").
+    vowels ("user", "euro", "one"). It is intentionally lightweight for the
+    short keigo context labels used by this application rather than a
+    full-featured English pronunciation engine.
     """
     lower = word.strip().lower()
     if lower.startswith(("honest", "honor", "hour", "heir")):

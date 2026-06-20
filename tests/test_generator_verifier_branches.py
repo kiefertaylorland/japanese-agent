@@ -156,6 +156,8 @@ def test_generator_error_paths_and_helpers(monkeypatch):
     assert generator_module._random_meaning(random.Random(1), KanjiEntry("日", ["sun", "day"])) in {"sun", "day"}
 
     sleep_calls: list[float] = []
+    # First call sets the timestamp. The second call arrives 0.7 seconds later,
+    # so the helper should sleep for the remaining 0.3 seconds.
     times = iter([10.0, 10.2, 10.9, 11.0])
     monkeypatch.setattr(generator_module.time, "monotonic", lambda: next(times))
     monkeypatch.setattr(generator_module.time, "sleep", lambda seconds: sleep_calls.append(seconds))
