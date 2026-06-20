@@ -48,7 +48,7 @@ def test_generator_covers_kanji_phrase_and_keigo_modes(vocab_dir):
     assert keigo_question.choices[keigo_question.correct_index] == "申し上げる"
 
     context_question = generator.generate(context_card, _request("keigo", context="meeting"), random.Random(4))
-    assert context_question.prompt == "Which is appropriate in a email context?"
+    assert context_question.prompt == "Which is appropriate in an email context?"
     assert context_question.choices[context_question.correct_index] == "拝見する"
 
 

@@ -183,7 +183,8 @@ class ContentGeneratorAgent:
 
         if card.variant == "context_selection":
             context = request.context if request.context in entry.example_contexts else entry.example_contexts[0]
-            prompt = f"Which is appropriate in a {context} context?"
+            article = "an" if context[:1].lower() in {"a", "e", "i", "o", "u"} else "a"
+            prompt = f"Which is appropriate in {article} {context} context?"
             pool_entries = [item for item in self.vocab.keigo if item.base != entry.base]
             if request.context:
                 filtered = [item for item in pool_entries if request.context not in item.example_contexts]
