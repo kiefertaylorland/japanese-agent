@@ -263,6 +263,7 @@ def _random_meaning(rng: random.Random, entry: KanjiEntry) -> str:
 
 
 def _indefinite_article(word: str) -> str:
+    """Choose a simple English indefinite article for common context words."""
     lower = word.strip().lower()
     if lower.startswith(("honest", "honor", "hour", "heir")):
         return "an"
