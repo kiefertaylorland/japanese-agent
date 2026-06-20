@@ -19,6 +19,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "pytest>=8.2.0",
+  "pytest-cov>=7.0.0",
 ]
 
 [project.scripts]
@@ -26,3 +27,6 @@ jp-agent = "jp_agent.cli:app"
 
 [tool.setuptools.packages.find]
 include = ["jp_agent*"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=jp_agent --cov-report=term-missing --cov-fail-under=100"

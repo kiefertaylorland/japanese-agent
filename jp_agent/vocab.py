@@ -102,12 +102,6 @@ def required_filenames(mode: str, level: str | None) -> list[str]:
         return [EXPECTED_FILES["core_vocab"]]
     if mode == "survival":
         return [EXPECTED_FILES["survival"]]
-    if mode == "vocab":
-        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["core_vocab"]))
-        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=entries, survival_phrases=[])
-    if mode == "survival":
-        entries = load_phrases(resolve_vocab_path(data_dir, EXPECTED_FILES["survival"]))
-        return VocabStore(hiragana=[], katakana=[], kanji={}, keigo=[], core_vocab=[], survival_phrases=entries)
     raise ValueError(f"Unsupported mode: {mode}")
 
 
