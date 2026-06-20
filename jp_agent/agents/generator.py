@@ -263,7 +263,12 @@ def _random_meaning(rng: random.Random, entry: KanjiEntry) -> str:
 
 
 def _indefinite_article(word: str) -> str:
-    """Choose a simple English indefinite article for common context words."""
+    """Choose a simple English indefinite article for common context words.
+
+    This follows the usual vowel-sound rule, plus a few common English
+    exceptions such as silent-H words ("hour") and consonant-sound leading
+    vowels ("user", "euro", "one").
+    """
     lower = word.strip().lower()
     if lower.startswith(("honest", "honor", "hour", "heir")):
         return "an"

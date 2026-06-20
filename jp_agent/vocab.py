@@ -90,17 +90,17 @@ def resolve_vocab_path(data_dir: Path, filename: str) -> Path:
 def required_filenames(mode: str, level: str | None) -> list[str]:
     if mode == "kana":
         return [EXPECTED_FILES["hiragana"], EXPECTED_FILES["katakana"]]
-    if mode in {"hiragana", "katakana"}:
+    elif mode in {"hiragana", "katakana"}:
         return [EXPECTED_FILES[mode]]
-    if mode == "kanji":
+    elif mode == "kanji":
         if not level:
             raise ValueError("Kanji mode requires level")
         return [EXPECTED_FILES[f"kanji_{level}"]]
-    if mode == "keigo":
+    elif mode == "keigo":
         return [EXPECTED_FILES["keigo"]]
-    if mode == "vocab":
+    elif mode == "vocab":
         return [EXPECTED_FILES["core_vocab"]]
-    if mode == "survival":
+    elif mode == "survival":
         return [EXPECTED_FILES["survival"]]
     raise ValueError(f"Unsupported mode: {mode}")
 
