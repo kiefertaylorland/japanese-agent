@@ -257,8 +257,6 @@ def stats_accuracy(conn: sqlite3.Connection, since_iso: str) -> tuple[int, int]:
         """,
         (since_iso,),
     ).fetchone()
-    if row is None:
-        return (0, 0)
     correct = int(row["correct"] or 0)
     total = int(row["total"] or 0)
     return (correct, total)
